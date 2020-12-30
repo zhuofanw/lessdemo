@@ -1,0 +1,27 @@
+/*会编译到css中 &表示同级*/
+#wrap {
+  width: 800px;
+  height: 900px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .inner {
+  height: 100px;
+  width: 100px;
+  background: black;
+}
+#wrap .inner2 {
+  height: 200px;
+  width: 200px;
+  background: deeppink;
+}
+#wrap .inner3 {
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  border-width: 40px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+}

@@ -1,0 +1,32 @@
+//不会编译到css中
+/*会编译到css中 &表示同级*/
+.item(@h:100px,@w:100px,@c:pink) {
+	height: @h;
+	width: @w;
+	background: @c;
+}
+.triangle(@w,@c) {
+	width: 0;
+	height: 0;
+	margin-left: 10px;
+	border-width: @w;
+	border-style: solid;
+	border-color: transparent transparent transparent @c;
+}
+#wrap {
+	width: 800px;
+	height: 500 + 400px;
+	border: 1px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.inner {
+		.item(@c:black);
+	}
+	.inner2 {
+		.item(200px,200px,deeppink);
+	}
+	.inner3 {
+		.triangle(40px, red);
+	}
+}
